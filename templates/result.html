@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Recommendation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body background="static/image2.jpg" style="background-attachment:fixed;background-size:cover;">
+    <div style="padding: 1px;">
+        <h3 >Top Recommendations With Probability</h3>
+        <ul style="text-align: left;">
+            {% for recommendation in recommendations %}
+                <li class="List-group-item"style="font-size:large;">{{ recommendation[0] }} With Probability {{ recommendation[1] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

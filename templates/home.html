@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body background="static/image1.jpg" style="background-attachment: fixed;background-size: cover;">
+    <div class="bgimage" id="bgImage" >
+        <div class="mynav shadow-sm" style="color:rgb(15, 16, 16);padding:10px;width:100%;text-align: center;">
+            <h1 class="text-center">Education Recommendation System</h1>
+        </div>
+        <div class="container" style="border:4px solid black;">
+            <a href="/recommend" class="btn btn-primary" style="text-align: center;"><h1>Get Recommendation</h1></a>
+        </div>
+   </div>
+</body>
+<script>
+    const images=["static/image1.jpg","static/image2.jpg"];
+        let currentIndex=0;
+        function changeBackground(){
+            document.getElementById('bgImage').style.backgroundImage=`url('${images[currentIndex]}')`;
+            currentIndex=(currentIndex+1)%images.length;
+            setTimeout(changeBackground,3000);
+        }
+    changeBackground();
+</script>
+</html>

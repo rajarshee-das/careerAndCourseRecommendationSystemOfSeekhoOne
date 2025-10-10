@@ -6,10 +6,10 @@ from flask import Flask,render_template,request
 app=Flask(__name__)
 scaler=pickle.load(open('scaler.pkl','rb'))
 model=pickle.load(open('model.pkl','rb'))
-class_names=['Lawyer', 'Doctor', 'Government Officer', 'Artist', 'Unknown',
-       'Software Engineer', 'Teacher', 'Business Owner', 'Scientist',
-       'Banker', 'Writer', 'Accountant', 'Designer',
-       'Construction Engineer', 'Game Developer', 'Stock Investor',
+class_names=['Lawyer ( CLAT Examination Preparation Course )', 'Doctor ( Neet Preparation Course )', 'Government Officer ( SSC Examination Preparation Course )', 'Artist ( Visual Artist Course )', 'Unknown',
+       'Software Engineer ( JEE Preparation course , Dsa )', 'Teacher ( TET Examination Preparation Course )', 'Business Owner', 'Scientist',
+       'Banker ( Banking Examination Preparation Course )', 'Writer', 'Accountant ( Banking Examination Preparation Course )', 'Designer ( Visual Artist Course )',
+       'Construction Engineer ( Construction Site Engineer Course )', 'Game Developer', 'Stock Investor',
        'Real Estate Developer']
 def Recommendation(gender,part_time_job,absence_days,extracurricular_activities,weekly_self_study_hours,
                    math_score,history_score,physics_score,chemistry_score,biology_score,
